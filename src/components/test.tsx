@@ -1,9 +1,16 @@
-import React from 'react'
-
-const Test = () => {
+import React from "react";
+import "../App.css";
+type TestProps = {
+  name: string;
+  age: number;
+};
+const Test = ({ name, age }: TestProps) => {
   return (
-    <div>testing</div>
-  )
-}
+    <div>
+      <span className="name">Name: {name}</span>,
+      <span className="age">Age: {age}</span>
+    </div>
+  );
+};
 
-export default Test
+export default Test;
